@@ -26,3 +26,5 @@ Remember to visit http://localhost:8000/register/writer and http://localhost:800
 
 Built With
 Laravel - The PHP Framework For Web Artisans.
+
+This project Design By Kishan Maurya.
