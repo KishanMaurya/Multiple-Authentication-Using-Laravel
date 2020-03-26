@@ -10,7 +10,7 @@
                     </div>
 
                     <div class="card-body font-weight-bold">
-                         Hi there, regular user
+                         Hi there, regular user {{ Auth::user()->name }}
                     </div>
                 </div>
             </div>
