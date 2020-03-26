@@ -1,3 +1,14 @@
+Home Page 
+![home](https://user-images.githubusercontent.com/45098599/77694163-a081dc80-6fcf-11ea-8c4b-2f49a437bf45.jpg)
+Register Page
+![register](https://user-images.githubusercontent.com/45098599/77694311-ce672100-6fcf-11ea-894e-9cd28ad5eee0.jpg)
+Login Page
+![login](https://user-images.githubusercontent.com/45098599/77694362-e474e180-6fcf-11ea-954c-c3ded26438d9.jpg)
+Admin PAGE
+
+![admin](https://user-images.githubusercontent.com/45098599/77694408-fa82a200-6fcf-11ea-9abb-429a3d73ac56.jpg)
+
+
 
 Laravel Multiple Authentication
 A simple implementation of multiple authentication in Laravel.
