@@ -1,3 +1,4 @@
+
 Laravel Multiple Authentication
 A simple implementation of multiple authentication in Laravel.
 
