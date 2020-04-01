@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin</title>
+    <title>User Dashboard</title>
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,10 +15,10 @@
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
           <a class="navbar-brand brand-logo font-weight-bold" href="{{ url('/') }}">
-            ADMIN
+            USER
           </a>
           <a class="navbar-brand brand-logo-mini font-weight-bold" href="{{ url('/') }}">
-            AD
+            US
           </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -143,32 +143,26 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{{ route('home') }}">
                 <span class="menu-title">Dashboard</span>
                 <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">
-                <span class="menu-title">View All Users</span>
+              <a class="nav-link" href="{{ route('user_post') }}">
+                <span class="menu-title">Create New Post</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('post_view')}}">
+                <span class="menu-title">View All Post</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">
-                <span class="menu-title">View All Writers</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <span class="menu-title">Booking</span>
-                <i class="mdi mdi-table-large menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">
-                <span class="menu-title">Riview</span>
+                <span class="menu-title">Total Post</span>
                 <i class="mdi mdi-table-large menu-icon"></i>
               </a>
             </li>

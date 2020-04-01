@@ -34,7 +34,7 @@
                     <h4 class="font-weight-normal mb-3">Total Users<i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                     </h4>
                     <h2 class="mb-5">{{ \App\User::all()->count() }}</h2>
-                    <h6 class="card-text">All Users </h6>
+                    <h6 class="card-text">All Users</h6>
                   </div>
                 </div>
               </div>

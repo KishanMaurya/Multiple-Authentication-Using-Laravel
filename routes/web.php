@@ -29,3 +29,7 @@ Route::post('/register/writer', 'Auth\RegisterController@createWriter');
 Route::view('/home', 'home')->middleware('auth');
 Route::view('/admin', 'admin')->middleware('auth:admin');
 Route::view('/writer', 'writer')->middleware('auth:writer');
+Route::get('/home','PostController@userDash')->name('home');
+Route::get('create_post','PostController@index')->name('user_post');
+Route::get('post_view','PostController@show')->name('post_view');
+Route::post('/create','PostController@store');
