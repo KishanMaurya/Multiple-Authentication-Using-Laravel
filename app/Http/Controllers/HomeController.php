@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+use Image;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,16 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function Show()
+    {
+        $data=Post::orderBy('id', 'asc')->get();
+        return view('welcome',compact('data'));
+    }
+    public function Store(Request $request)
+    {
+        $id=$request->id;
+        $data=Post::where('id', '=' ,$id)->get();
+        return view('view' , compact('data'));
     }
 }

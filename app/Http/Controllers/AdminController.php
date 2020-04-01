@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\admin;
 use Illuminate\Http\Request;
+use App\Post;
 
 class AdminController extends Controller
 {
@@ -14,7 +15,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
+        $data=Post::all();
+        return view('admin.AllPost',compact('data'));
     }
 
     /**

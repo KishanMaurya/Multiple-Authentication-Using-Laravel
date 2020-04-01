@@ -94,7 +94,7 @@
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1 text-black">
+                  <p class="mb-1 text-black font-weight-bold">
                     {{ Auth::user()->name }}
                   </p>
                 </div>
@@ -162,7 +162,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">
-                <span class="menu-title">Booking</span>
+                <span class="menu-title">All Posts</span>
                 <i class="mdi mdi-table-large menu-icon"></i>
               </a>
             </li>

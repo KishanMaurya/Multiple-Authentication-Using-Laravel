@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('user_post');
+        return view('user.user_post');
     }
 
     /**
@@ -94,8 +94,8 @@ class PostController extends Controller
      */
     public function show(post $post)
     {
-        $posts=Post::all();
-        return view('post_view',compact('posts'));
+        $posts=Post::where('post_id' , Auth::user()->id)->get();
+        return view('user.post_view',compact('posts'));
     }
 
     /**
@@ -131,7 +131,7 @@ class PostController extends Controller
     {
         //
     }
-    public function userDash()
+    public function UserDash()
     {
         return view('home');
     }

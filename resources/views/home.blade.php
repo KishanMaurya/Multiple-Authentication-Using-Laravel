@@ -15,16 +15,17 @@
               <nav aria-label="breadcrumb">
               </nav>
             </div>
-            <div class="row justify-content-center">
-              <div class="col-md-11 stretch-card grid-margin">
+            <div class="row">
+              <div class="col-md-12 stretch-card grid-margin">
                 <div class="card bg-gradient-danger card-img-holder text-white">
                   <div class="card-body">
                     <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
-                    <h4 class="font-weight-bold mb-3">Total Post<i class="mdi mdi-chart-line mdi-24px float-right"></i>
+                    <h4 class="font-weight-bold mb-3">Total Post By User<i class="mdi mdi-chart-line mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5 font-weight-bold">
-                        {{ \App\writer::all()->count() }}</h2>
-                    <h6 class="card-text font-weight-bold">All Post</h6>
+                    <h1 class="mb-5 font-weight-bold">
+                      {{ \App\post::where('post_id',Auth::user()->id)->count() }}
+                    </h1>
+                    <h6 class="card-text font-weight-bold">All User Post</h6>
                   </div>
                 </div>
               </div>

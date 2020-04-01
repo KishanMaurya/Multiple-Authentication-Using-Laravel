@@ -15,7 +15,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <!-- Styles -->
         <style>
             html, body {
@@ -116,53 +116,19 @@
             </div>
         </nav>
         <div class="container-fluid">
-            <div class="row justify-content-center mt-2">
-                <div class="col-md-12">
-                    <div id="demo" class="carousel slide" data-ride="carousel">
-                          <!-- Indicators -->
-                        <ul class="carousel-indicators">
-                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                            <li data-target="#demo" data-slide-to="1"></li>
-                            <li data-target="#demo" data-slide-to="2"></li>
-                            <li data-target="#demo" data-slide-to="3"></li>
-                            <li data-target="#demo" data-slide-to="4"></li>
-                            <li data-target="#demo" data-slide-to="5"></li>
-                        </ul>
-
-                          <!-- The slideshow -->
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="../img/bml.png" alt="Los Angeles" width="100%" height="500">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="../img/lm1.jpeg" alt="Los Angeles" width="100%" height="500">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="../img/lma.png" alt="Los Angeles" width="100%" height="500">
-                            </div>
-                            <div class="carousel-item">
-                              <img src="../img/lmaa.jpeg" alt="Chicago" width="100%" height="500">
-                            </div>
-                            
-                        </div>
-
-                          <!-- Left and right controls -->
-                          <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                          </a>
-                          <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                          </a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-md-12 text-left mt-2 mr-5">
+                    <a href="{{url()->previous()}}" class="font-weight-bold mt-5" title="Back link">
+                        <i class="fas fa-arrow-circle-left display-4 text-success fixed-top mt-5"></i>
+                    </a>
+                </div>
             </div>
-            
             @foreach($data as $row)
                 <div class="row justify-content-center mt-5 mb-5">
-                    <div class="col-md-3">
+                    <div class="col-md-8">
                         <div class="card shadow border-0">
                           <div class="view overlay">
-                            <img class="card-img-top" src="img/{{ $row->image }}" alt="Card image cap">
+                        <img class="card-img-top" src="/img/{{ $row->image }}" alt="Card image cap" height="300px">
                             <a href="#!">
                               <div class="mask rgba-white-slight"></div>
                             </a>
@@ -170,43 +136,42 @@
                           <div class="card-body">
                             <h4 class="card-title">{{ $row->title }}</h4>
                             <p class="card-text"> {{ $row->body }}</p>
-                            <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
                           </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card shadow border-0">
-                          <div class="view overlay">
-                            <img class="card-img-top" src="img/{{ $row->image }}" alt="Card image cap">
-                            <a href="#!">
-                              <div class="mask rgba-white-slight"></div>
-                            </a>
-                          </div>
-                          <div class="card-body">
-                            <h4 class="card-title">{{ $row->title }}</h4>
-                            <p class="card-text">{{ $row->body }}</p>
-                            <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow border-0">
-                          <div class="view overlay">
-                            <img class="card-img-top" src="img/{{ $row->image }}"alt="Card image cap">
-                            <a href="#!">
-                              <div class="mask rgba-white-slight"></div>
-                            </a>
-                          </div>
-                          <div class="card-body">
-                            <h4 class="card-title">{{ $row->title }}</h4>
-                            <p class="card-text">{{ $row->body }}</p>
-                            <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
-                          </div>
+                    
+                </div>
+            @endforeach
+            <div class="row justify-content-around mt-5 mb-5">
+                <div class="col-md-6">
+                    <div class="card shadow border-0 mb-5">
+                        <div class="card-body">
+                            <form action="">
+                                <label for="" class="font-weight-bold text-dark">Name:</label>
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter Name...">
+                                </div>
+                                <label for="" class="text-dark font-weight-bold">Comment:</label>
+                                <div class="form-group">
+                                    <textarea name="comment" id="" cols="30" rows="3" class="form-control" placeholder="Enter comment.."></textarea>
+                                </div>
+                                <div class="form-group text-right">
+                                    <button type="submit" class="btn btn-success font-weight-bold">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            @endforeach
             </div>
+            <div class="row">
+                <div class="col-md-12 text-right mt-2 mr-5">
+                    <a href="{{url()->previous()}}" class="font-weight-bold mt-5" title="Back link">
+                        <i class="fas fa-arrow-circle-left display-4 text-success fixed-bottom mb-5"></i>
+                    </a>
+                </div>
+            </div>
+            </div>
+            
             <footer class="shadow-lg bg-success">
                 <div class="container-fluid">
                     <div class="row">

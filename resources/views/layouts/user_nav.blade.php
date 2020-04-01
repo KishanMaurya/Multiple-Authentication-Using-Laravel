@@ -94,7 +94,7 @@
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1 text-black">
+                  <p class="mb-1 text-black font-weight-bold">
                     {{ Auth::user()->name }}
                   </p>
                 </div>
@@ -149,13 +149,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('user_post') }}">
+              <a class="nav-link" href="{{ route('user.user_post') }}">
                 <span class="menu-title">Create New Post</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('post_view')}}">
+              <a class="nav-link" href="{{ route('user.post_view')}}">
                 <span class="menu-title">View All Post</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
               </a>

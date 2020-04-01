@@ -23,7 +23,7 @@
                   <h3 class="card-title font-weight-bold">View All Post </h3>
                 </div>
                 <div class="card-body">
-                  <table class="table table-hover table-responsive-md">
+                  <table class="table table-hover table-responsive table-bordered">
                     <tr>
                       <th>#</th>
                       <th>Title</th>
