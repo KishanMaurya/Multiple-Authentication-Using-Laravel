@@ -32,7 +32,7 @@
               <div class="col-md-3 stretch-card grid-margin">
                 <div class="card bg-gradient-danger card-img-holder text-white">
                   <div class="card-body">
-                    <a href="" class="text-white">
+                    <a href="{{ route('admin.allWriter') }}" class="text-white">
                       <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                       <h4 class="font-weight-normal mb-3">Total Writers <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                       </h4>
@@ -45,7 +45,7 @@
               <div class="col-md-3 stretch-card grid-margin">
                 <div class="card bg-gradient-info card-img-holder text-white">
                   <div class="card-body">
-                    <a href="" class="text-white">
+                    <a href="{{ route('admin.allUser') }}" class="text-white">
                       <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                       <h4 class="font-weight-normal mb-3">Total Users<i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                       </h4>
@@ -58,7 +58,7 @@
               <div class="col-md-3 stretch-card grid-margin">
                 <div class="card bg-gradient-success card-img-holder text-white">
                   <div class="card-body">
-                    <a href="" class="text-white">
+                    <a href="{{ route('admin.allAdmin') }}" class="text-white">
                       <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                       <h4 class="font-weight-normal mb-3">Total Admins<i class="mdi mdi-diamond mdi-24px float-right"></i>
                       </h4>

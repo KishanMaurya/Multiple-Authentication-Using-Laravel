@@ -1,4 +1,4 @@
-@extends('layouts.writer_nav')
+@extends('layouts.admin_nav')
 @section('content')
     <div class="main-panel">
         <div class="content-wrapper">
@@ -35,7 +35,7 @@
                       <th>Edit</th>
                       <th>Delete</th>
                     </tr>
-                    @foreach($posts as $row)
+                    @foreach($data as $row)
                       <tr>
                         <td>{{ $row->id }}</td>
                         <td width="10%">{{ $row->title }}</td>
@@ -46,13 +46,13 @@
                         <td>{{ $row->created_at }}</td>
                         <td></td>
                         <td>
-                        <button data="{{ $row->id }}" class="btn btn-sm btn-outline-info view">View</button>
+                        <button class="btn btn-sm btn-outline-info view">View</button>
                         </td>
                         <td>
-                          <button data="{{ $row->id }}" class="btn btn-outline-primary btn-sm edit">Edit</button>
+                          <button class="btn btn-outline-primary btn-sm edit">Edit</button>
                         </td>
                         <td>
-                          <button data="{{ $row->id }}" class="btn btn-sm btn-outline-danger delete">Delete</button>
+                          <button class="btn btn-sm btn-outline-danger delete">Delete</button>
                         </td>
                       </tr>
                       @endforeach
@@ -63,63 +63,4 @@
           </div>
         @include('layouts.footer_nav')
     </div>
-
-
-<!---Writer View model!--->
-
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-dialog-md">
-      <div class="modal-content bg-white">
-        <div class="modal-header bg-success">
-          <h4 class="modal-title text-white font-weight-bold">Writer Post View</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-          <div class="card">
-            <div class="card-body">
-              <table id="tableview" class="table table-hover table-bordered" >
-                
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>  
-
- <!---end!---> 
-
-<!---Writer Edit!--->
-   <div id="Modaledit" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content bg-white">
-        <div class="modal-header bg-success">
-          <h4 class="modal-title text-white font-weight-bold">Writer Post View</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-          <div class="card">
-            <div class="card-body">
-              <table class="table table-hover" id="table">
-                
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div> 
-
-  <!---end!--->
 @endsection
-

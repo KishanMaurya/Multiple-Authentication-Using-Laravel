@@ -33,7 +33,7 @@
                 <div class="card-header bg-white">
                   <h3 class="card-title font-weight-bold">Create New Post </h3>
                 </div>
-                <form action="/create" method="post" enctype="multipart/form-data">
+                <form action="/success" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="card-body">
                       <label for="" class="font-weight-bold">Title:</label>

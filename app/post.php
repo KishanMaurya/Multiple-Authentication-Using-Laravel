@@ -16,6 +16,7 @@ class post extends Authenticatable
    		'body',
    		'image',
       'post_id',
+      'writer_id',
    	];
 
     public function User()
@@ -25,5 +26,9 @@ class post extends Authenticatable
     public function writer()
     {
     	return $this->hashMany(writer::class);
+    }
+    public function comment()
+    {
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
     }
 }

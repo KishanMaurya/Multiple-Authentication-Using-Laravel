@@ -17,12 +17,8 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
     var footer = $('.footer');
     var sidebar = $('.sidebar');
 
-    //Add active class to nav-link based on url dynamically
-    //Active class can be hard coded directly in html file also as required
-
     function addActiveClass(element) {
       if (current === "") {
-        //for root url
         if (element.attr('href').indexOf("index.html") !== -1) {
           element.parents('.nav-item').last().addClass('active');
           if (element.parents('.sub-menu').length) {
@@ -31,7 +27,6 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
           }
         }
       } else {
-        //for other url
         if (element.attr('href').indexOf(current) !== -1) {
           element.parents('.nav-item').last().addClass('active');
           if (element.parents('.sub-menu').length) {
@@ -56,18 +51,15 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
       addActiveClass($this);
     })
 
-    //Close other submenu in sidebar on opening any
 
     sidebar.on('show.bs.collapse', '.collapse', function() {
       sidebar.find('.collapse.show').collapse('hide');
     });
 
 
-    //Change sidebar and content-wrapper height
     applyStyles();
 
     function applyStyles() {
-      //Applying perfect scrollbar
       if (!body.hasClass("rtl")) {
         if (body.hasClass("sidebar-fixed")) {
           var fixedSidebarScroll = new PerfectScrollbar('#sidebar .nav');
@@ -83,10 +75,8 @@ var lightColor = getComputedStyle(document.body).getPropertyValue('--light');
       }
     });
 
-    //checkbox and radios
     $(".form-check label,.form-radio label").append('<i class="input-helper"></i>');
 
-    //fullscreen
     $("#fullscreen-button").on("click", function toggleFullScreen() {
       if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
         if (document.documentElement.requestFullScreen) {

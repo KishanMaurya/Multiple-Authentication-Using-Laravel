@@ -37,11 +37,31 @@ Route::get('create_post','PostController@index')->name('user.user_post');
 Route::get('post_view','PostController@show')->name('user.post_view');
 Route::post('/create','PostController@store');
 
-
 // Route::get('/writer','WriterController@WriterDash')->name('writer');
-Route::get('create','WriterController@index')->name('writer.create');
-Route::get('view','WriterController@show')->name('writer.view');
 
+//Writer middleware
+Route::group(['middleware' => ['auth:writer']], function () {
 
-//admin
+Route::get('/writer','WriterController@WriterDash')->name('writer');
+Route::get('createpost','WriterController@index')->name('writer.create');
+Route::post('/success','WriterController@store');
+Route::get('allview','WriterController@show')->name('writer.view');
+Route::get('/','HomeController@Show')->name('welcome');
+Route::get('view_more/{id}','HomeController@Store')->name('view');
+Route::post('/writerview','WriterController@AjaxView');
+Route::get('/WriterEdit','WriterController@AjaxEdit');
+
+});
+
+//admin middeleware
+Route::group(['middleware' => ['auth:admin']], function () {
+
 Route::get('allpost','AdminController@index')->name('admin.AllPost');
+Route::get('allWriter','AdminController@allWriter')->name('admin.allWriter');
+Route::get('allUser','AdminController@allUser')->name('admin.allUser');
+Route::get('allAdmin','AdminController@allAdmin')->name('admin.allAdmin');
+
+});
+
+
+

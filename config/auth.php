@@ -57,6 +57,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+            'hash' => false,
+        ],
+        'writer-api' => [
+            'driver' => 'token',
+            'provider' => 'writers',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -85,12 +95,12 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'model' => App\Admin::class,
+            'model' => App\admin::class,
         ],
         
         'writers' => [
             'driver' => 'eloquent',
-            'model' => App\Writer::class,
+            'model' => App\writer::class,
         ],
 
         // 'users' => [
@@ -117,6 +127,18 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'writers' => [
+            'provider' => 'writers',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

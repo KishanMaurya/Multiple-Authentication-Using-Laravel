@@ -25,7 +25,12 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
-
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+        $this->middleware('guest:admin')->except('logout');
+        $this->middleware('guest:writer')->except('logout');
+    }
     /**
      * Where to redirect users after login.
      *
@@ -77,10 +82,5 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-        $this->middleware('guest:admin')->except('logout');
-        $this->middleware('guest:writer')->except('logout');
-    }
+    
 }

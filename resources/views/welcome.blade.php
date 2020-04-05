@@ -15,7 +15,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <!-- Styles -->
         <style>
             html, body {
@@ -74,6 +74,10 @@
                 bottom: 0px;
                 left: 0px;
                 height: 50px;
+            }
+            .heart , .star{
+                font-size: 20px;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -170,6 +174,18 @@
                           <div class="card-body">
                             <h4 class="card-title">{{ $row->title }}</h4>
                             <p class="card-text"> {{ $row->body }}</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4 text-danger">
+                                    <i class="fas fa-heart heart"></i> 21
+                                </div>
+                                <div class="col-md-8 text-right text-primary">
+                                    345 <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star-half-alt star"></i>
+                                </div>
+                            </div>
                             <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
                           </div>
                         </div>
@@ -185,6 +201,18 @@
                           <div class="card-body">
                             <h4 class="card-title">{{ $row->title }}</h4>
                             <p class="card-text">{{ $row->body }}</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4 text-danger">
+                                    <i class="fas fa-heart heart"></i> 21
+                                </div>
+                                <div class="col-md-8 text-right text-primary">
+                                    345 <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star-half-alt star"></i>
+                                </div>
+                            </div>
                             <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
                           </div>
                         </div>
@@ -200,6 +228,18 @@
                           <div class="card-body">
                             <h4 class="card-title">{{ $row->title }}</h4>
                             <p class="card-text">{{ $row->body }}</p>
+                            <div class="row mb-3">
+                                <div class="col-md-4 text-danger">
+                                    <i class="fas fa-heart heart"></i> 21
+                                </div>
+                                <div class="col-md-8 text-right text-primary">
+                                    345 <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star-half-alt star"></i>
+                                </div>
+                            </div>
                             <a href="view_more/{{$row->id}}" class="btn btn-primary btn-block font-weight-bold">View More</a>
                           </div>
                         </div>

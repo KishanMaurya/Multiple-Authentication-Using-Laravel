@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\admin;
+use App\comment;
 use Illuminate\Http\Request;
-use App\Post;
-use App\writer;
-use App\User;
-use Illuminate\Support\Facades\Crypt;
 
-class AdminController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,24 +14,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data=Post::all();
-        return view('admin.AllPost',compact('data'));
+        //
     }
-    public function AllWriter()
-    {
-        $data=writer::all();
-        return view('admin.allWriter',compact('data'));
-    }
-    public function AllUser()
-    {
-        $data=User::all();
-        return view('admin.allUser',compact('data'));
-    }
-    public function AllAdmin()
-    {
-        $data=admin::all();
-        return view('admin.allAdmin',compact('data'));
-    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -60,10 +41,10 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\admin  $admin
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(admin $admin)
+    public function show(comment $comment)
     {
         //
     }
@@ -71,10 +52,10 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\admin  $admin
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function edit(admin $admin)
+    public function edit(comment $comment)
     {
         //
     }
@@ -83,10 +64,10 @@ class AdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\admin  $admin
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, admin $admin)
+    public function update(Request $request, comment $comment)
     {
         //
     }
@@ -94,10 +75,10 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\admin  $admin
+     * @param  \App\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admin $admin)
+    public function destroy(comment $comment)
     {
         //
     }
