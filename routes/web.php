@@ -48,7 +48,7 @@ Route::post('/success','WriterController@store');
 Route::get('allview','WriterController@show')->name('writer.view');
 Route::get('/','HomeController@Show')->name('welcome');
 Route::get('view_more/{id}','HomeController@Store')->name('view');
-Route::post('/writerview','WriterController@AjaxView');
+Route::get('/writerview','WriterController@AjaxView');
 Route::get('/WriterEdit','WriterController@AjaxEdit');
 
 });

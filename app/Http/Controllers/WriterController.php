@@ -101,7 +101,7 @@ class WriterController extends Controller
     public function AjaxView(Request $request)
     {
         $id=$request->id;
-        $data= Post::where('id', '=', $id)->get();
+        $data= Post::where('id', '=', $id)->first();
         return response()->json(['result'=> $data]);
     }
 

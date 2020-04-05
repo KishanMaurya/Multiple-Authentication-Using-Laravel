@@ -68,7 +68,7 @@
 <!---Writer View model!--->
 
   <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-dialog-md">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content bg-white">
         <div class="modal-header bg-success">
           <h4 class="modal-title text-white font-weight-bold">Writer Post View</h4>
@@ -78,7 +78,7 @@
         <div class="modal-body">
           <div class="card">
             <div class="card-body">
-              <table id="tableview" class="table table-hover table-bordered" >
+              <table id="tableview" class="table table-hover table-bordered" width="300px" >
                 
               </table>
             </div>
