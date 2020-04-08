@@ -1,4 +1,17 @@
+Home Page
+![home](https://user-images.githubusercontent.com/45098599/78823129-ceb4e280-79f9-11ea-8664-c2df1a27f9f0.png)
+Descirption
+![home2](https://user-images.githubusercontent.com/45098599/78823150-d4122d00-79f9-11ea-952a-c1164cf3c899.png)
+User DashBoard
+![userinsert](https://user-images.githubusercontent.com/45098599/78823161-da080e00-79f9-11ea-934a-722407c2d6c8.png)
 
+![userdashboard](https://user-images.githubusercontent.com/45098599/78823271-0c197000-79fa-11ea-9d7e-ca7ede2c5609.png)
+![userlogin](https://user-images.githubusercontent.com/45098599/78823282-0facf700-79fa-11ea-8c1a-da442e48e8df.png)
+![creartewrityer](https://user-images.githubusercontent.com/45098599/78823290-120f5100-79fa-11ea-8092-eb6f46042858.png)
+![viewwriter](https://user-images.githubusercontent.com/45098599/78823297-163b6e80-79fa-11ea-9819-1af82fc0a72a.png)
+![admin](https://user-images.githubusercontent.com/45098599/78823306-19365f00-79fa-11ea-9583-2d439d857062.png)
+![writerdashboard](https://user-images.githubusercontent.com/45098599/78823316-1cc9e600-79fa-11ea-895c-104fdba8366f.png)
+![creartewrityer](https://user-images.githubusercontent.com/45098599/78823324-205d6d00-79fa-11ea-916a-5caee31187ee.png)
 
 
 Laravel Multiple Authentication
